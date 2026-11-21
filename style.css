@@ -1,0 +1,256 @@
+/* PENGATURAN DASAR */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.profile-img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #c79c45;
+    display: block;
+    margin: 20px auto;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: #61579c;
+    color: #ffffff;
+    line-height: 1.7;
+}
+
+/* NAVBAR */
+header {
+    background-color: #4554b9;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+}
+
+.logo {
+    color: #907ccb;
+    font-size: 26px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #a78bfa;
+}
+
+
+.menu-button{
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 25px;
+}
+
+
+
+/* HERO */
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    padding: 60px 10%;
+}
+
+
+.hero-content{
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+}
+
+.back {
+    background-image: url("1234.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.greeting {
+    color: #a78bfa;
+    letter-spacing: 3px;
+    font-size: 13px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin: 15px 0;
+}
+
+.hero h1 span {
+    color: #a78bfa;
+}
+
+.hero h2 {
+    color: #cccddc;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: #b5b5c5;
+    margin-bottom: 25px;
+}
+
+/* BUTTON */
+.menu-button {
+    display: inline-block;
+    background-color: #8b5cf6;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.menu-button:hover {
+    background-color: #6d28d9;
+    transform: translateY(-3px);
+}
+
+/* SECTION */
+.section {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 32px;
+    color: #a78bfa;
+    margin-bottom: 25px;
+}
+
+.section p {
+    max-width: 750px;
+    margin: auto;
+    color: #c5cd;
+}
+
+/* SKILLS */
+.skill-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.skill-card {
+    background-color: #222235;
+    padding: 15px 25px;
+    border-radius: 10px;
+    border: 1px solid #393952;
+    transition: 0.3s;
+}
+
+.skill-card:hover{
+    background-color: #8b5cf6;
+    transform: translateY(-5px);
+}
+
+/* PROJECT */
+.project-container{
+    display: grid;
+    grid-template-columns: repeat(3,fr);
+    gap: 20px;
+}
+
+.project-card{
+    background-color: #222235;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #393952;
+    transition: 0.3s;
+}
+
+.project-card:hover{
+    transform: translateY(-8px);
+    border-color: #a78bfa;
+}
+
+.project-card h3{
+    color: #a78bfa;
+    margin-bottom: 12px;
+}
+
+.project-card p{
+    font-size: 14px;
+}
+
+/* FOOTER */
+footer{
+    background-color: #171251;
+    text-align: center;
+    padding: 25px;
+    color: #9999aa;
+}
+
+/* RESPONSIVE MOBILE */
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 15px 5%;
+    }
+
+    .menu-button{
+        display: block;
+    }
+
+    .nav-menu{
+        display: none;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        background-color: #171251;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .nav-menu.active{
+        display: flex;
+    }
+
+    .hero{
+        min-height: 75vh;
+        padding: 50px 7%;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .section{
+        padding: 60px 7%;
+    }
+
+    .project-container{
+        grid-template-columns: 1fr;
+    }
+}
